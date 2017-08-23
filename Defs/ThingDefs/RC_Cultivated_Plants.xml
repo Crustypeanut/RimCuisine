@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Plants>
+
+  <!--=========================== Food crops ==============================-->
+
+	<ThingDef ParentName="PlantBase">
+		<defName>PlantCaveCap</defName>
+		<label>cave cap</label>
+		<description>An edible, blue glowing fungus that often grows in large caverns beneath the surface.  Favored by colonists for its ability to grow without sunlight, it does have the odd but harmless side-effect of making the excrements of whomever eats it glow with a faint blue aura.</description>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plants/CaveCapPlant</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+		<ingestible>
+			<nutrition>0.2</nutrition>
+		</ingestible>
+		<plant>
+			<fertilitySensitivity>.5</fertilitySensitivity>
+			<dieIfLeafless>false</dieIfLeafless>
+			<reproduces>false</reproduces>
+			<maxMeshCount>1</maxMeshCount>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>RawCaveCaps</harvestedThingDef>
+			<harvestYield>8</harvestYield>
+			<sowTags>
+				<li>Ground</li>
+			</sowTags>
+			<growOptimalGlow>0.0</growOptimalGlow>
+			<growMinGlow>-1.0</growMinGlow>
+			<topWindExposure>0.0</topWindExposure>
+			<growDays>4</growDays>
+			<visualSizeRange>
+				<min>0.3</min>
+				<max>0.9</max>
+			</visualSizeRange>
+		</plant>
+	</ThingDef>
+	
+
+	
+	</Plants>

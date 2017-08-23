@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<ThingDef ParentName="MealRottable">
+    <defName>MealNutrientPaste</defName>
+    <label>nutrient paste meal</label>
+    <description>A synthetic mixture of protein, carbohydrates, and vitamins, amino acids and minerals. Everything the body needs, and absolutely disgusting.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/NutrientPaste</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>12</MarketValue>
+    </statBases>
+    <ingestible>
+	  <chairSearchRadius>25</chairSearchRadius>
+      <preferability>MealAwful</preferability>
+			<tasteThought>AteAwfulMeal</tasteThought>
+			<nutrition>0.90</nutrition>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="MealRottable">
+    <defName>MealSimple</defName>
+    <label>simple meal</label>
+    <description>A simple, bland tasting meal quickly cooked from a single set of ingredients..</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Simple</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>18</MarketValue>
+      <WorkToMake>300</WorkToMake>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+			<tasteThought>AteBlandMeal</tasteThought>
+			<nutrition>0.70</nutrition>
+			<ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+  </ThingDef>
+  
+  <ThingDef ParentName="MealRottable">
+    <defName>MealNormal</defName>
+    <label>normal meal</label>
+    <description>A normal dish cooked with vegetables and either meats or grains.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Simple</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>24</MarketValue>
+      <WorkToMake>450</WorkToMake>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+			<nutrition>0.80</nutrition>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+  </ThingDef>
+  
+   <ThingDef ParentName="MealRottable">
+    <defName>MealFine</defName>
+    <label>fine meal</label>
+    <description>A complex dish assembled with care from a selection of meats, vegetables, and grains</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Fine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>24</MarketValue>
+      <WorkToMake>450</WorkToMake>
+    </statBases>
+    <ingestible>
+      <preferability>MealFine</preferability>
+			<tasteThought>AteFineMeal</tasteThought>
+			<nutrition>0.90</nutrition>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+  </ThingDef>
+  
+  <ThingDef ParentName="MealRottable">
+    <defName>MealLavish</defName>
+    <label>lavish meal</label>
+    <description>A complex and masterful dish made from a wide variety of quality ingredients and spices.  Delicious.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Lavish</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>30</MarketValue>
+      <WorkToMake>800</WorkToMake>
+    </statBases>
+    <ingestible>
+      <preferability>MealLavish</preferability>
+			<tasteThought>AteLavishMeal</tasteThought>
+      <nutrition>1.00</nutrition>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+	  <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>Stuffed</hediffDef>
+          <severity>1.0</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+  
+    <ThingDef ParentName="MealRottable">
+    <defName>MealExtravagant</defName>
+    <label>extravagant meal</label>
+    <description>A masterpiece of the culinary arts, this meal nourishes the body, mind, and soul.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Lavish</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>41</MarketValue>
+      <WorkToMake>800</WorkToMake>
+    </statBases>
+    <ingestible>
+      <preferability>MealLavish</preferability>
+			<tasteThought>AteExtravagantMeal</tasteThought>
+      <nutrition>1.00</nutrition>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+	  <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>Stuffed</hediffDef>
+          <severity>1.0</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>Stuffed</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>stuffed from a delicious meal</label>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-4.0</severityPerDay>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <hungerRateFactor>.75</hungerRateFactor>
+          <restFallFactor>1.25</restFallFactor>
+        </li>
+      </stages>
+  </HediffDef>
+
+	<!--Survival Foods-->
+
+   <ThingDef ParentName="OrganicProductBase">
+    <defName>Pemmican</defName>
+    <label>pemmican</label>
+    <thingClass>ThingWithComps</thingClass>
+    <description>A preserved mashed mixture of fat and plant food. Tastes bland, but not offensive. It lasts a very long time without refrigeration.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Pemmican</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+	<thingCategories>
+      <li>FoodMeals</li>
+    </thingCategories>
+    <statBases>
+      <MarketValue>1.5</MarketValue>
+      <Mass>0.018</Mass>
+      <WorkToMake>700</WorkToMake>
+			<DeteriorationRate>2</DeteriorationRate>
+    </statBases>
+    <ingestible>
+      <foodType>Meal</foodType>
+	  <chairSearchRadius>1</chairSearchRadius>
+      <preferability>MealSimple</preferability>
+      <nutrition>0.05</nutrition>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+			<optimalityOffset>6</optimalityOffset>
+		</ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>80</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_Ingredients" />
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+  </ThingDef>
+	
+	  <ThingDef ParentName="MealBase">
+    <defName>MealSurvivalPack</defName>
+    <label>packaged survival meal</label>
+    <description>A high-quality packaged meal, manufactured for use in survival situations.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/SurvivalPack</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <MarketValue>25</MarketValue>
+      <Mass>0.4</Mass>
+      <WorkToMake>1400</WorkToMake>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+	  <chairSearchRadius>1</chairSearchRadius>
+			<nutrition>0.90</nutrition>
+			<optimalityOffset>-5</optimalityOffset>
+			<ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+  </ThingDef>
+
+</ThingDefs>

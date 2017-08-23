@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ 
+
+	<ThoughtDef>
+		<defName>AteMuffaloMeatAsIngredient</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>0.5</durationDays>
+		<stackLimit>3</stackLimit>
+		<stages>
+			<li>
+				<label>ate cooked muffalo meat</label>
+				<description>Mmmm, cooked muffalo flesh, tasty!</description>
+				<baseMoodEffect>+5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<FleshTypeDef>
+    <defName>Muffalo</defName>
+    <ateAsIngredient>AteMuffaloMeatAsIngredient</ateAsIngredient>
+    <corpseCategory>CorpsesAnimal</corpseCategory>
+  </FleshTypeDef>
+  
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>Muffalo</defName>
+    <label>muffalo</label>
+    <description>A large herding herbivore descended from buffalo and adapted for some exotic environment. Peaceful unless disturbed.</description>
+    <statBases>
+      <MoveSpeed>3.6</MoveSpeed>
+      <ComfyTemperatureMin>-60</ComfyTemperatureMin>
+      <MarketValue>500</MarketValue>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Milkable">
+        <milkDef>Milk</milkDef>
+        <milkIntervalDays>2</milkIntervalDays>
+        <milkAmount>12</milkAmount>
+      </li>
+      <li Class="CompProperties_Shearable">
+        <woolDef>WoolMuffalo</woolDef>
+        <shearIntervalDays>25</shearIntervalDays>
+        <woolAmount>100</woolAmount>
+      </li>
+    </comps>
+    <race>
+      <herdAnimal>true</herdAnimal>
+	  <fleshType>Muffalo</fleshType>
+      <body>QuadrupedAnimalWithHooves</body>
+      <baseBodySize>2.1</baseBodySize>
+      <baseHealthScale>1.75</baseHealthScale>
+			<baseHungerRate>0.85</baseHungerRate>
+      <foodType>VegetarianRoughAnimal</foodType>
+      <leatherColor>(152,170,174)</leatherColor>
+      <leatherInsulation>1.0</leatherInsulation>
+      <gestationPeriodDays>25</gestationPeriodDays>
+      <wildness>0.5</wildness>
+      <nuzzleMtbHours>120</nuzzleMtbHours>
+			<packAnimal>true</packAnimal>
+      <lifeExpectancy>15</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.25</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.5</minAge>
+          <soundWounded>Pawn_Muffalo_Wounded</soundWounded>
+          <soundDeath>Pawn_Muffalo_Death</soundDeath>
+          <soundCall>Pawn_Muffalo_Call</soundCall>
+          <soundAngry>Pawn_Muffalo_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>StandardAnimal</li>
+    </tradeTags>
+  </ThingDef>
+  
+</Defs>

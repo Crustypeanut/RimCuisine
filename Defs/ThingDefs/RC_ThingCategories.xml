@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingCategoryDefs>
+
+  <!-- Foods -->
+
+    <ThingCategoryDef>
+      <defName>FoodMeals</defName>
+      <label>meals</label>
+      <parent>Foods</parent>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+      <iconPath>UI/Icons/ThingCategories/FoodMeals</iconPath>
+    </ThingCategoryDef>
+
+	
+	<ThingCategoryDef>
+      <defName>FoodRaw</defName>
+      <label>raw ingredients</label>
+      <parent>Foods</parent>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+      <iconPath>UI/Icons/ThingCategories/FoodRaw</iconPath>
+    </ThingCategoryDef>
+	
+		<ThingCategoryDef>
+			<defName>MeatRaw</defName>
+			<label>meat</label>
+			<parent>FoodRaw</parent>
+			<iconPath>UI/Icons/ThingCategories/MeatRaw</iconPath>
+		</ThingCategoryDef>
+	
+		<ThingCategoryDef>
+			<defName>PlantFoodRaw</defName>
+			<label>vegetarian</label>
+			<parent>FoodRaw</parent>
+			<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+		</ThingCategoryDef>
+		
+			<ThingCategoryDef>
+				<defName>GrainsRaw</defName>
+				<label>grains</label>
+				<parent>PlantFoodRaw</parent>
+				<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+			</ThingCategoryDef>
+	
+			<ThingCategoryDef>
+				<defName>VegetablesRaw</defName>
+				<label>vegetables</label>
+				<parent>PlantFoodRaw</parent>
+				<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+			</ThingCategoryDef>
+	
+			<ThingCategoryDef>
+				<defName>FruitRaw</defName>
+				<label>fruits</label>
+				<parent>PlantFoodRaw</parent>
+				<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+			</ThingCategoryDef>
+			
+		<ThingCategoryDef>
+			<defName>SpicesRaw</defName>
+			<label>spices</label>
+			<parent>FoodRaw</parent>
+			<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+		</ThingCategoryDef>
+	
+		<ThingCategoryDef>
+			<defName>SweetsRaw</defName>
+			<label>sweets</label>
+			<parent>FoodRaw</parent>
+			<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+		</ThingCategoryDef>
+	
+		<ThingCategoryDef>
+			<defName>AnimalProductRaw</defName>
+			<label>animal products</label>
+			<parent>FoodRaw</parent>
+			<iconPath>UI/Icons/ThingCategories/AnimalProductRaw</iconPath>
+		</ThingCategoryDef>
+
+			<ThingCategoryDef>
+			<defName>EggsUnfertilized</defName>
+			<label>eggs (unfert.)</label>
+			<parent>AnimalProductRaw</parent>
+			<iconPath>UI/Icons/ThingCategories/EggsUnfertilized</iconPath>
+			</ThingCategoryDef>
+
+			<ThingCategoryDef>
+			<defName>EggsFertilized</defName>
+			<label>eggs (fert.)</label>
+			<parent>AnimalProductRaw</parent>
+			<iconPath>UI/Icons/ThingCategories/EggsFertilized</iconPath>
+			</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+      <defName>FoodProcessed</defName>
+      <label>processed ingredients</label>
+      <parent>Foods</parent>
+      <resourceReadoutRoot>true</resourceReadoutRoot>
+      <iconPath>UI/Icons/ThingCategories/FoodRaw</iconPath>
+    </ThingCategoryDef>
+	
+		<ThingCategoryDef>
+			<defName>MeatProcessed</defName>
+			<label>meat</label>
+			<parent>FoodProcessed</parent>
+			<iconPath>UI/Icons/ThingCategories/MeatRaw</iconPath>
+		</ThingCategoryDef>
+	
+		<ThingCategoryDef>
+			<defName>PlantFoodProcessed</defName>
+			<label>vegetarian</label>
+			<parent>FoodProcessed</parent>
+			<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+		</ThingCategoryDef>
+		
+			<ThingCategoryDef>
+				<defName>GrainsProcessed</defName>
+				<label>grains</label>
+				<parent>PlantFoodProcessed</parent>
+				<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+			</ThingCategoryDef>
+	
+			<ThingCategoryDef>
+				<defName>VegetablesProcessed</defName>
+				<label>vegetables</label>
+				<parent>PlantFoodProcessed</parent>
+				<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+			</ThingCategoryDef>
+	
+			<ThingCategoryDef>
+				<defName>FruitProcessed</defName>
+				<label>fruits</label>
+				<parent>PlantFoodProcessed</parent>
+				<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+			</ThingCategoryDef>
+			
+		<ThingCategoryDef>
+			<defName>SpicesProcessed</defName>
+			<label>spices</label>
+			<parent>FoodProcessed</parent>
+			<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+		</ThingCategoryDef>
+	
+		<ThingCategoryDef>
+			<defName>SweetsProcessed</defName>
+			<label>sweets</label>
+			<parent>FoodProcessed</parent>
+			<iconPath>UI/Icons/ThingCategories/PlantFoodRaw</iconPath>
+		</ThingCategoryDef>
+	
+		<ThingCategoryDef>
+			<defName>AnimalProductProcessed</defName>
+			<label>animal products</label>
+			<parent>FoodProcessed</parent>
+			<iconPath>UI/Icons/ThingCategories/AnimalProductRaw</iconPath>
+		</ThingCategoryDef>
+		
+  
+</ThingCategoryDefs>
